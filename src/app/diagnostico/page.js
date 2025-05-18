@@ -101,14 +101,34 @@ export default function Login() {
     return (
         <>
 
-
             <nav className="navbar navbar-expand-lg bg-consultoria">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                        <img src="https://3pservicepartner.com.br/wp-content/uploads/2025/03/3P_logo-horizontal_1-1-e1744026584210.png" alt="Logo 3P" className="img-fluid" style={{ maxHeight: 80 }} />
+                <div className="container-fluid d-flex align-items-center justify-content-between">
+
+                    {/* Logo - sempre visível */}
+                    <a className="navbar-brand mb-0" href="#">
+                        <img
+                            src="https://3pservicepartner.com.br/wp-content/uploads/2025/03/3P_logo-horizontal_1-1-e1744026584210.png"
+                            alt="Logo 3P"
+                            className="img-fluid"
+                            style={{ maxHeight: 80 }}
+                        />
                     </a>
+
+                    {/* Título no mobile (à direita) */}
+                    <div className="d-flex d-lg-none align-items-center">
+                        <h1 className="mb-0 fw-bold text-white fs-1">Raio X</h1>
+                    </div>
+
+                    {/* Título no desktop (centralizado) */}
+                    <div className="mx-auto d-none d-lg-block text-center position-absolute start-50 translate-middle-x">
+                        <h1 className="mb-0 fw-bold text-white fs-2">Raio X</h1>
+                    </div>
+
+                    {/* Espaço invisível para manter layout equilibrado */}
+                    <div style={{ width: 80 }} className="d-none d-lg-block"></div>
                 </div>
             </nav>
+
 
             <div className="container mt-4">
                 <h2 className="text-center">Diagnóstico</h2>

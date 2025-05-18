@@ -56,7 +56,6 @@ export default function Home() {
       const token = response.data.token
       localStorage.setItem('USER_TOKEN_3P', token);
 
-      alert('Cadastro realizado com sucesso, agora você pode acesser a área logada com email e senha!');
       router.push('/diagnostico')
     } catch (error) {
       const errorMessage = error.response?.data?.error || 'Ocorreu um erro inesperado.';
@@ -121,7 +120,7 @@ export default function Home() {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="contato" className="form-label">Contato</label>
+            <label htmlFor="contato" className="form-label">Telefone</label>
             <input
               type="text"
               className="form-control"
@@ -129,6 +128,9 @@ export default function Home() {
               value={contato}
               onChange={(e) => setContato(e.target.value)}
             />
+            <small className="form-text text-muted">
+              Informe apenas números com DDD. Ex: 43999998888
+            </small>
           </div>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">Email</label>
