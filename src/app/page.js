@@ -56,6 +56,11 @@ export default function Home() {
       const token = response.data.token
       localStorage.setItem('USER_TOKEN_3P', token);
 
+      // LinkedIn Conversion Tracking
+      if (typeof window !== 'undefined' && window.lintrk) {
+        window.lintrk('track', { conversion_id: 22163145 });
+      }
+
       router.push('/diagnostico')
     } catch (error) {
       const errorMessage = error.response?.data?.error || 'Ocorreu um erro inesperado.';

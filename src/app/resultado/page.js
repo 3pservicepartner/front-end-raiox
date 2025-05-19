@@ -147,6 +147,7 @@ export default function Login() {
 
 
             } catch (error) {
+                alert(error)
                 const errorMessage = error.response?.data?.error || 'Ocorreu um erro inesperado.';
                 alert(errorMessage);
                 router.push('/');
