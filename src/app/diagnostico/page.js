@@ -209,11 +209,11 @@ export default function Login() {
                                     <div className="d-flex flex-column">
                                         <div className="form-check">
                                             <input type="radio" name="q3" value="1" id="q3-1" onChange={handleChangeQ3} className="form-check-input" />
-                                            <label htmlFor="q3-1" className="form-check-label">Temos mapeamento dos custos</label>
+                                            <label htmlFor="q3-1" className="form-check-label">Não revisamos nem avaliamos</label>
                                         </div>
                                         <div className="form-check">
                                             <input type="radio" name="q3" value="2" id="q3-2" onChange={handleChangeQ3} className="form-check-input" />
-                                            <label htmlFor="q3-2" className="form-check-label">Não revisamos nem avaliamos</label>
+                                            <label htmlFor="q3-2" className="form-check-label">Temos mapeamento dos custos</label>
                                         </div>
                                         <div className="form-check">
                                             <input type="radio" name="q3" value="3" id="q3-3" onChange={handleChangeQ3} className="form-check-input" />
