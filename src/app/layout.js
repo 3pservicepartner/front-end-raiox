@@ -18,6 +18,10 @@ export default function RootLayout({ children }) {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
 
         {/* Estilo inline */}
         <style dangerouslySetInnerHTML={{
@@ -109,6 +113,26 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {children}
+
+        {/* Botão flutuante do WhatsApp */}
+        <a
+          href="https://wa.me/5543988081414"
+          className="btn btn-success position-fixed d-flex align-items-center justify-content-center"
+          style={{
+            bottom: '20px',
+            right: '20px',
+            width: '60px',
+            height: '60px',
+            borderRadius: '50%',
+            zIndex: 9999,
+          }}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Fale conosco no WhatsApp"
+        >
+          <i className="bi bi-whatsapp fs-3"></i>
+        </a>
+
       </body>
     </html>
   );
