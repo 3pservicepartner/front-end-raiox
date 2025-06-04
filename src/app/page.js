@@ -102,10 +102,9 @@ export default function Home() {
 
 
       <div className="container mt-4">
-        <h2>Cadastro</h2>
         <form action="diagnostico.html">
           <div className="mb-3">
-            <label htmlFor="nome" className="form-label">Nome Completo</label>
+            <label htmlFor="nome" className="form-label">Nome</label>
             <input
               type="text"
               className="form-control"

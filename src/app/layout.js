@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
           type="image/png"
           href="https://3pservicepartner.com.br/wp-content/uploads/2025/03/3P_logo-horizontal_1-1-e1744026584210.png"
         />
-        <title>Cadastro</title>
+        <title>RaioX 3P</title>
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
