@@ -180,8 +180,23 @@ export default function Login() {
             <nav className="navbar navbar-expand-lg bg-consultoria">
                 <div className="container-fluid d-flex align-items-center justify-content-between">
 
-                    {/* Logo - sempre visível */}
-                    <a className="navbar-brand mb-0" href="#">
+                    {/* Layout Mobile: Logo + Título lado a lado */}
+                    <div className="d-flex d-lg-none align-items-center justify-content-between w-100">
+                        <a className="navbar-brand mb-0 d-flex align-items-center" href="#">
+                            <img
+                                src="https://3pservicepartner.com.br/wp-content/uploads/2025/03/3P_logo-horizontal_1-1-e1744026584210.png"
+                                alt="Logo 3P"
+                                className="img-fluid"
+                                style={{ maxHeight: 80 }}
+                            />
+                        </a>
+                        <h1 className="mb-0 fw-bold text-white fs-6 text-end ms-2 flex-grow-1">
+                            Raio X – Resultado do diagnóstico do seu negócio
+                        </h1>
+                    </div>
+
+                    {/* Layout Desktop: Logo à esquerda */}
+                    <a className="navbar-brand mb-0 d-none d-lg-flex align-items-center" href="#">
                         <img
                             src="https://3pservicepartner.com.br/wp-content/uploads/2025/03/3P_logo-horizontal_1-1-e1744026584210.png"
                             alt="Logo 3P"
@@ -190,17 +205,14 @@ export default function Login() {
                         />
                     </a>
 
-                    {/* Título no mobile (à direita) */}
-                    <div className="d-flex d-lg-none align-items-center">
-                        <h1 className="mb-0 fw-bold text-white fs-1">Raio X</h1>
-                    </div>
-
                     {/* Título no desktop (centralizado) */}
                     <div className="mx-auto d-none d-lg-block text-center position-absolute start-50 translate-middle-x">
-                        <h1 className="mb-0 fw-bold text-white fs-2">Raio X</h1>
+                        <h1 className="mb-0 fw-bold text-white fs-2">
+                            Raio X – Resultado do diagnóstico do seu negócio
+                        </h1>
                     </div>
 
-                    {/* Espaço invisível para manter layout equilibrado */}
+                    {/* Espaço invisível para equilibrar no desktop */}
                     <div style={{ width: 80 }} className="d-none d-lg-block"></div>
                 </div>
             </nav>
@@ -245,6 +257,64 @@ export default function Login() {
             <footer className="text-center mt-5 py-3 bg-consultoria">
                 <p className="footer-text mb-0">© 2025 3pservicepartner.com</p>
             </footer>
+
+            {/* Estilo direto no HTML */}
+            <style>
+                {`
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.85;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    `}
+            </style>
+
+            {/* Botão flutuante do WhatsApp com balão */}
+            <div
+                className="position-fixed"
+                style={{ bottom: '20px', right: '20px', zIndex: 9999 }}
+            >
+                <div className="d-flex align-items-center gap-2">
+                    {/* Balão de fala */}
+                    <span
+                        className="px-3 py-2 text-white fw-semibold"
+                        style={{
+                            backgroundColor: '#25D366',
+                            borderRadius: '10px',
+                            boxShadow: '0 0 10px rgba(0,0,0,0.2)',
+                            whiteSpace: 'nowrap',
+                            animation: 'pulse 2s infinite',
+                        }}
+                    >
+                        Fale com um especialista 3P
+                    </span>
+
+                    {/* Botão WhatsApp */}
+                    <a
+                        href="https://wa.me/5543988081414"
+                        className="btn btn-success d-flex align-items-center justify-content-center"
+                        style={{
+                            width: '60px',
+                            height: '60px',
+                            borderRadius: '50%',
+                        }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Fale conosco no WhatsApp"
+                    >
+                        <i className="bi bi-whatsapp fs-3"></i>
+                    </a>
+                </div>
+            </div>
 
 
         </>

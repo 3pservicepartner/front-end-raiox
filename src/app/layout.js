@@ -36,48 +36,8 @@ export default function RootLayout({ children }) {
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        {/* LinkedIn Insight Tag */}
-        <Script id="linkedin-tag" strategy="afterInteractive">
-          {`
-            _linkedin_partner_id = "8135945";
-            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-            (function(l) {
-              if (!l) {
-                window.lintrk = function(a,b) { window.lintrk.q.push([a,b]) };
-                window.lintrk.q = [];
-              }
-              var s = document.getElementsByTagName("script")[0];
-              var b = document.createElement("script");
-              b.type = "text/javascript"; b.async = true;
-              b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-              s.parentNode.insertBefore(b, s);
-            })(window.lintrk);
-          `}
-        </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=8135945&fmt=gif"
-          />
-        </noscript>
-
-        {/* Google Tag Manager */}
-        <Script id="gtm-head" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MNRPRFHJ');
-          `}
-        </Script>
-
-        {/* Facebook Meta Pixel */}
-        <Script id="fb-pixel" strategy="afterInteractive">
+        {/* Meta Pixel Script */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -87,51 +47,26 @@ export default function RootLayout({ children }) {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '688706863749104');
+            fbq('init', '1787819748758348');
             fbq('track', 'PageView');
           `}
         </Script>
+
+      </head>
+
+      <body>
+
+        {children}
+
+        {/* Fallback para quando o JS está desativado */}
         <noscript>
           <img
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=688706863749104&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1787819748758348&ev=PageView&noscript=1"
           />
         </noscript>
-      </head>
-
-      <body>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MNRPRFHJ"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-
-        {children}
-
-        {/* Botão flutuante do WhatsApp */}
-        <a
-          href="https://wa.me/5543988081414"
-          className="btn btn-success position-fixed d-flex align-items-center justify-content-center"
-          style={{
-            bottom: '20px',
-            right: '20px',
-            width: '60px',
-            height: '60px',
-            borderRadius: '50%',
-            zIndex: 9999,
-          }}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Fale conosco no WhatsApp"
-        >
-          <i className="bi bi-whatsapp fs-3"></i>
-        </a>
 
       </body>
     </html>
